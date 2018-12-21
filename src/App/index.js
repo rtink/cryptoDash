@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Settings from '../Settings';
-import AppLayout from './AppLayout';
 import AppBar from './AppBar';
+import AppLayout from './AppLayout';
 import { AppProvider } from './AppProvider';
 import Content from '../Shared/Content';
+import Dashboard from '../Dashboard';
+import Settings from '../Settings';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <AppBar />
           <Content>
             <Settings />
+            <Dashboard />
           </Content>
         </AppProvider>
       </AppLayout>
