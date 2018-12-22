@@ -1,9 +1,9 @@
+import fuzzy from 'fuzzy';
+import _ from 'lodash';
 import React from 'react';
 import styled from 'styled-components';
-import { backgroundColor2, fontSize2 } from '../Shared/Styles';
 import { AppContext } from '../App/AppProvider';
-import _ from 'lodash';
-import fuzzy from 'fuzzy';
+import { backgroundColor2, fontSize2 } from '../Shared/Styles';
 
 const SearchGrid = styled.div`
   display: grid;
@@ -48,7 +48,7 @@ function filterCoins (e, setFilteredCoins, coinList) {
 export default function() {
   return (
     <AppContext.Consumer>
-      {({setFilteredCoins, coinList}) =>
+      {({coinList, setFilteredCoins}) =>
         <SearchGrid>
           <h2>Search all coins</h2>
           <SearchInput onKeyUp={(e) => filterCoins(e, setFilteredCoins, coinList)} />
